@@ -30,21 +30,21 @@ const App = () => {
           <h3 className="section-title">Featured Products</h3>
           <div className="product-grid">
             <div className="product-card">
-              <img src="components/products/folklore-white-tea.jpg" alt="folklore-white-tea" className="product-img" />
+              <img src="/products/folklore-white-tea.jpg" alt="folklore-white-tea" className="product-img" />
               <div className="product-info">
                 <h4 className="product-title">Folklore White Tea</h4>
                 <p className="product-price">$10.99</p>
               </div>
             </div>
             <div className="product-card">
-              <img src="components/products/invincible-black-tee.jpg" alt="invincible-black-tee" className="product-img" />
+              <img src="/products/invincible-black-tee.jpg" alt="invincible-black-tee" className="product-img" />
               <div className="product-info">
                 <h4 className="product-title">Invincible Graphic Tee</h4>
                 <p className="product-price">$9.99</p>
               </div>
             </div>
             <div className="product-card">
-              <img src="/components/products/jogger-pants.jpg" alt="vagabond jogger pants" className="product-img" />
+              <img src="/products/jogger-pants.jpg" alt="vagabond jogger pants" className="product-img" />
               <div className="product-info">
                 <h4 className="product-title">Vagabond Jogger Pants</h4>
                 <p className="product-price">$14.99</p>
