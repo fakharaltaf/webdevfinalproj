@@ -93,6 +93,12 @@ body {
   cursor: pointer;
 }
 
+.hero-btn a {
+  color: white;
+  text-decoration: none;
+}
+
+
 .hero-btn:hover {
   background-color: red;
 }
