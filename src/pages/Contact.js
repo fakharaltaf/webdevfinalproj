@@ -1,4 +1,3 @@
-// src/pages/Contact.js
 import React, { useState } from "react";
 
 const Contact = () => {
@@ -8,16 +7,36 @@ const Contact = () => {
         message: "",
     });
 
+    const [submitted, setSubmitted] = useState(false);
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({ ...prevData, [name]: value }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Form submitted:", formData);
-        alert("Thank you for reaching out! We'll get back to you soon.");
-        setFormData({ name: "", email: "", message: "" });
+
+        try {
+            const response = await fetch("https://formspree.io/f/mrbeqygo", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setSubmitted(true);
+                alert("Thank you for reaching out! We'll get back to you soon.");
+                setFormData({ name: "", email: "", message: "" });
+            } else {
+                alert("Something went wrong. Please try again.");
+            }
+        } catch (error) {
+            console.error("Error submitting the form:", error);
+            alert("There was an error submitting your message. Please try again.");
+        }
     };
 
     return (
@@ -64,6 +83,8 @@ const Contact = () => {
 
                     <button type="submit" className="submit-btn">Send Message</button>
                 </form>
+
+                {submitted && <p className="success-message">Your message has been sent successfully!</p>}
             </section>
 
             <section className="contact-details">
