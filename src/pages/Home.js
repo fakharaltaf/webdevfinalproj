@@ -11,7 +11,6 @@ const Home = () => {
     ];
     return (
         <div className="app">
-
             {/* Hero Section */}
             <section id="home" className="hero">
                 <h2 className="hero-title custom-font">Own the Street.</h2>
@@ -21,7 +20,7 @@ const Home = () => {
 
             {/* Featured Products */}
             <section id="shop" className="featured-products">
-                <h3 className="section-title">Featured Products</h3>
+                <h3 className="section-title custom-font">Featured Products</h3>
                 <div className="product-grid">
                     {products.map((product) => (
                         <div className="product-card" key={product.id}>
@@ -42,7 +41,7 @@ const Home = () => {
             <footer className="footer">
                 <p>&copy; 2025 Dripper. All rights reserved.</p>
                 <div className="social-links">
-                    <a href="#">Instagram</a>
+                    <a href="">Instagram</a>
                     <a href="#">Facebook</a>
                     <a href="#">Twitter</a>
                 </div>

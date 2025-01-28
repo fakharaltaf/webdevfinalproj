@@ -4,6 +4,8 @@ import "./App.css";
 import Home from "./pages/Home";
 import ProductPage from "./pages/ProductPage";
 import Cart from "./pages/Cart";
+import About from "./pages/About";
+import Contact from "./pages/Contact"; // Import Contact page
 import { Link } from "react-router-dom";
 
 const App = () => {
@@ -19,8 +21,12 @@ const App = () => {
                   Home
                 </Link></li>
                 <li><a href="/#shop">Shop</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><Link to={`/about`} className="About">
+                  About
+                </Link></li>
+                <li><Link to={`/contact`} className="Contact">
+                  Contact
+                </Link></li>
               </ul>
             </nav>
             <Link to={`/cart`} className="cart">
@@ -33,6 +39,8 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/product/:id" element={<ProductPage />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/about" element={<About />} /> {/* Define route for About page */}
+            <Route path="/contact" element={<Contact />} /> {/* Define route for About page */}
           </Routes>
         </div>
       </Router>
