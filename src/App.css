@@ -339,6 +339,47 @@ body {
   background-color: darkred;
 }
 
+.cart-container {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.empty-cart {
+  color: gray;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.cart-total {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+}
+
 /* Popup Styles */
 .popup {
   position: fixed;

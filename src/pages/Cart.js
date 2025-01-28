@@ -31,49 +31,71 @@ const CartPage = () => {
 
     // Calculate total price
     const calculateTotal = () => {
-        return cart.reduce((total, item) => {
-            const price = parseFloat(item.price.replace("$", ""));
-            return total + price * item.quantity;
-        }, 0).toFixed(2);
+        return cart
+            .reduce((total, item) => {
+                const price = parseFloat(item.price.replace("$", ""));
+                return total + price * item.quantity;
+            }, 0)
+            .toFixed(2);
     };
-
-    if (cart.length === 0) {
-        return <h2>Your cart is empty!</h2>;
-    }
 
     return (
         <div className="cart-page">
             <h2>Your Cart</h2>
-            <ul className="cart-list">
-                {cart.map((item, index) => (
-                    <li key={index} className="cart-item">
-                        <div className="item-details">
-                            <img src={item.img} alt={item.name} className="cart-item-img" />
-                            <div>
-                                <h3>{item.name}</h3>
-                                <p>{item.description}</p>
-                                <p>Price: {item.price}</p>
-                            </div>
+            <div className="cart-container">
+                {cart.length === 0 ? (
+                    <div className="empty-cart">
+                        <p>Your cart is empty!</p>
+                    </div>
+                ) : (
+                    <>
+                        <ul className="cart-list">
+                            {cart.map((item, index) => (
+                                <li key={index} className="cart-item">
+                                    <div className="item-details">
+                                        <img
+                                            src={item.img}
+                                            alt={item.name}
+                                            className="cart-item-img"
+                                        />
+                                        <div>
+                                            <h3>{item.name}</h3>
+                                            <p>{item.description}</p>
+                                            <p>Price: {item.price}</p>
+                                        </div>
+                                    </div>
+                                    <div className="item-actions">
+                                        <label htmlFor={`quantity-${index}`}>
+                                            Quantity:
+                                        </label>
+                                        <input
+                                            type="number"
+                                            id={`quantity-${index}`}
+                                            min="1"
+                                            value={item.quantity}
+                                            onChange={(e) =>
+                                                handleQuantityChange(
+                                                    index,
+                                                    Number(e.target.value)
+                                                )
+                                            }
+                                            className="quantity-input"
+                                        />
+                                        <button
+                                            className="remove-btn"
+                                            onClick={() => handleRemove(index)}
+                                        >
+                                            Remove
+                                        </button>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+                        <div className="cart-total">
+                            <h3>Total: ${calculateTotal()}</h3>
                         </div>
-                        <div className="item-actions">
-                            <label htmlFor={`quantity-${index}`}>Quantity:</label>
-                            <input
-                                type="number"
-                                id={`quantity-${index}`}
-                                min="1"
-                                value={item.quantity}
-                                onChange={(e) => handleQuantityChange(index, Number(e.target.value))}
-                                className="quantity-input"
-                            />
-                            <button className="remove-btn" onClick={() => handleRemove(index)}>
-                                Remove
-                            </button>
-                        </div>
-                    </li>
-                ))}
-            </ul>
-            <div className="cart-total">
-                <h3>Total: ${calculateTotal()}</h3>
+                    </>
+                )}
             </div>
         </div>
     );
