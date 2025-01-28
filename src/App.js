@@ -4,6 +4,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import ProductPage from "./pages/ProductPage";
 import Cart from "./pages/Cart";
+import { Link } from "react-router-dom";
 
 const App = () => {
   return (
@@ -11,16 +12,20 @@ const App = () => {
         <div className="app">
           {/* Header */}
           <header className="header">
-            <h1 className="logo">dripper</h1>
+            <h1 className="logo">dripper.</h1>
             <nav className="nav">
               <ul className="nav-links">
-                <li><a href="#home">Home</a></li>
+                <li><Link to={`/#home`} className="Home">
+                  Home
+                </Link></li>
                 <li><a href="#shop">Shop</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
               </ul>
             </nav>
-            <div className="cart">🛒</div>
+            <Link to={`/cart`} className="cart">
+              🛒
+            </Link>
           </header>
 
           {/* Routes */}
