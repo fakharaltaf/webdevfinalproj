@@ -19,6 +19,14 @@ body {
   text-align: center;
 }
 
+.cart-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
 /* Header */
 .header {
   display: flex;
@@ -121,6 +129,7 @@ body {
 
 .product-card {
   background: white;
+  width: 100%;
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
@@ -228,9 +237,33 @@ body {
   background-color: red;
 }
 
+/* Quantity Section */
+.quantity-section {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.quantity-input {
+  width: 60px;
+  padding: 5px;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.quantity-input:focus {
+  outline: none;
+  border-color: black;
+}
+
 /* Cart Page */
+
 .cart-page {
-  padding: 40px 20px;
+  padding: 20px;
 }
 
 .cart-list {
@@ -250,6 +283,48 @@ body {
   border-radius: 8px;
 }
 
+.item-details {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-right: 20px;
+}
+
+.cart-item-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.item-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.cart-total {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.quantity-input {
+  width: 60px;
+  padding: 5px;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.quantity-input:focus {
+  outline: none;
+  border-color: black;
+}
+
 .remove-btn {
   padding: 5px 10px;
   font-size: 14px;
@@ -262,6 +337,39 @@ body {
 
 .remove-btn:hover {
   background-color: darkred;
+}
+
+/* Popup Styles */
+.popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 }
 
 /* Footer */

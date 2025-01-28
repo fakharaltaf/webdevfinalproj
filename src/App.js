@@ -15,10 +15,10 @@ const App = () => {
             <h1 className="logo">dripper.</h1>
             <nav className="nav">
               <ul className="nav-links">
-                <li><Link to={`/#home`} className="Home">
+                <li><Link to={`/`} className="Home">
                   Home
                 </Link></li>
-                <li><a href="#shop">Shop</a></li>
+                <li><a href="/#shop">Shop</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
               </ul>
