@@ -71,7 +71,7 @@ const CartPage = () => {
                                         <input
                                             type="number"
                                             id={`quantity-${index}`}
-                                            min="1"
+                                            min="0"
                                             value={item.quantity}
                                             onChange={(e) =>
                                                 handleQuantityChange(

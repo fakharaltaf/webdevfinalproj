@@ -439,6 +439,85 @@ body {
   text-decoration: underline;
 }
 
+/* Shop Page Styles */
+.shop-page {
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.shop-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.shop-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.shop-header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 15px;
+  text-align: left;
+}
+
+.product-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  color: #888;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.view-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #333;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.view-btn:hover {
+  background: #555;
+}
+
 /*About Page*/
 
 .about-page {
@@ -617,4 +696,6 @@ body {
 .contact-details a:hover {
   text-decoration: underline;
 }
+
+
 
