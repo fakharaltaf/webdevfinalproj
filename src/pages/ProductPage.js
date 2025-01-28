@@ -13,31 +13,31 @@ const ProductPage = () => {
     const products = {
         1: {
             name: "Folklore White Tea",
-            price: "$10.99",
+            price: "5999/-",
             description: "A soothing white tea for every occasion.",
             img: "/components/products/folklore-white-tea.jpg"
         },
         2: {
             name: "Invincible Graphic Tee",
-            price: "$9.99",
+            price: "4999/-",
             description: "Stylish graphic tee for everyday wear.",
             img: "/components/products/invincible-black-tee.jpg"
         },
         3: {
             name: "Vagabond Jogger Pants",
-            price: "$14.99",
+            price: "4500/-",
             description: "Comfortable joggers for active lifestyles.",
             img: "/components/products/jogger-pants.jpg"
         },
         4: {
             name: "Meditation Black Tee",
-            price: "$11.99",
+            price: "3900/-",
             description: "Relax in style with this premium black tee.",
             img: "/components/products/ongabonga.jpg"
         },
         5: {
             name: "Samurai Soulmates White Tee",
-            price: "$12.99",
+            price: "7150/-",
             description: "A tribute to timeless bonds and elegance.",
             img: "/components/products/samurai-soulmates-white-tee.jpg"
         }

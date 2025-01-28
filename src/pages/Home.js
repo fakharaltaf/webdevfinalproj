@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
     const products = [
-        { id: 1, name: "Folklore White Tea", price: "$10.99", img: "/components/products/folklore-white-tea.jpg" },
-        { id: 2, name: "Invincible Graphic Tee", price: "$9.99", img: "/components/products/invincible-black-tee.jpg" },
-        { id: 3, name: "Vagabond Jogger Pants", price: "$14.99", img: "/components/products/jogger-pants.jpg" },
-        { id: 4, name: "Meditation Black Tee", price: "$11.99", img: "/components/products/ongabonga.jpg" },
-        { id: 5, name: "Samurai Soulmates White Tee", price: "$12.99", img: "/components/products/samurai-soulmates-white-tee.jpg" }
+        { id: 1, name: "Folklore White Tea", price: "5999/-", img: "/components/products/folklore-white-tea.jpg" },
+        { id: 2, name: "Invincible Graphic Tee", price: "4999/-", img: "/components/products/invincible-black-tee.jpg" },
+        { id: 3, name: "Vagabond Jogger Pants", price: "4500/-", img: "/components/products/jogger-pants.jpg" },
+        { id: 4, name: "Meditation Black Tee", price: "3900/-", img: "/components/products/ongabonga.jpg" },
+        { id: 5, name: "Samurai Soulmates White Tee", price: "7150/-", img: "/components/products/samurai-soulmates-white-tee.jpg" }
     ];
     return (
         <div className="app">

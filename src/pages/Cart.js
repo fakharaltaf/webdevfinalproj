@@ -33,7 +33,7 @@ const CartPage = () => {
     const calculateTotal = () => {
         return cart
             .reduce((total, item) => {
-                const price = parseFloat(item.price.replace("$", ""));
+                const price = parseFloat(item.price.replace("/-", ""));
                 return total + price * item.quantity;
             }, 0)
             .toFixed(2);
@@ -92,7 +92,7 @@ const CartPage = () => {
                             ))}
                         </ul>
                         <div className="cart-total">
-                            <h3>Total: ${calculateTotal()}</h3>
+                            <h3>Total: PKR {calculateTotal()}</h3>
                         </div>
                     </>
                 )}
