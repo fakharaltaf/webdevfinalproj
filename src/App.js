@@ -7,6 +7,7 @@ import Cart from "./pages/Cart";
 import About from "./pages/About";
 import Contact from "./pages/Contact";// Import Contact page
 import Shop from "./pages/Shop";
+import Checkout from "./pages/Checkout";
 import { Link } from "react-router-dom";
 
 const App = () => {
@@ -45,6 +46,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/shop" element={<Shop />} />
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </div>
       </Router>

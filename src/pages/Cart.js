@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const CartPage = () => {
     const [cart, setCart] = useState([]);
@@ -95,6 +96,12 @@ const CartPage = () => {
                             <h3>Total: PKR {calculateTotal()}</h3>
                         </div>
                     </>
+
+                )}
+                {cart.length > 0 && (
+                    <div className="checkout-section">
+                        <Link to="/checkout" className="checkout-btn">Proceed to Checkout</Link>
+                    </div>
                 )}
             </div>
         </div>

@@ -518,6 +518,56 @@ body {
   background: #555;
 }
 
+.checkout-page {
+  padding: 20px;
+}
+
+.checkout-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.checkout-form, .order-summary {
+  width: 48%;
+}
+
+.checkout-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-form label {
+  margin: 5px 0;
+}
+
+.checkout-form input, .checkout-form select {
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.checkout-btn {
+  background-color: black;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.order-img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+
 /*About Page*/
 
 .about-page {

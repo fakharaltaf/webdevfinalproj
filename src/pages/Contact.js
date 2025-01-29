@@ -35,7 +35,7 @@ const Contact = () => {
             }
         } catch (error) {
             console.error("Error submitting the form:", error);
-            alert("There was an error submitting your message. Please try again.");
+            alert("There was an error submitting your message. Please fix the information and try again.");
         }
     };
 
