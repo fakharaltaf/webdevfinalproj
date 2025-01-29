@@ -1,68 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import "./App.css";
+import Home from "./pages/Home";
+import ProductPage from "./pages/ProductPage";
+import Cart from "./pages/Cart";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Shop from "./pages/Shop";
+import Checkout from "./pages/Checkout";
 
 const App = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-      <div className="app">
-        {/* Header */}
-        <header className="header">
-          <h1 className="logo">Dripper</h1>
-          <nav className="nav">
-            <ul className="nav-links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#shop">Shop</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-          <div className="cart">🛒</div>
-        </header>
+      <Router>
+        <div className="app">
+          {/* Header */}
+          <header className="header">
+            <h1 className="logo">dripper.</h1>
 
-        {/* Hero Section */}
-        <section id="home" className="hero">
-          <h2 className="hero-title custom-font">Own the Street.</h2>
-          <p className="hero-subtitle">Style that defines you</p>
-          <button className="hero-btn">Shop Now</button>
-        </section>
+            {/* Hamburger Menu */}
+            <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+              ☰
+            </button>
 
-        {/* Featured Products */}
-        <section id="shop" className="featured-products">
-          <h3 className="section-title">Featured Products</h3>
-          <div className="product-grid">
-            <div className="product-card">
-              <img src="/products/folklore-white-tea.jpg" alt="folklore-white-tea" className="product-img" />
-              <div className="product-info">
-                <h4 className="product-title">Folklore White Tea</h4>
-                <p className="product-price">$10.99</p>
-              </div>
-            </div>
-            <div className="product-card">
-              <img src="/products/invincible-black-tee.jpg" alt="invincible-black-tee" className="product-img" />
-              <div className="product-info">
-                <h4 className="product-title">Invincible Graphic Tee</h4>
-                <p className="product-price">$9.99</p>
-              </div>
-            </div>
-            <div className="product-card">
-              <img src="/products/jogger-pants.jpg" alt="vagabond jogger pants" className="product-img" />
-              <div className="product-info">
-                <h4 className="product-title">Vagabond Jogger Pants</h4>
-                <p className="product-price">$14.99</p>
-              </div>
-            </div>
-          </div>
-        </section>
+            <nav className={`nav ${menuOpen ? "open" : ""}`}>
+              <ul className="nav-links">
+                <li><Link to={`/`} onClick={() => setMenuOpen(false)}>Home</Link></li>
+                <li><Link to={`/shop`} onClick={() => setMenuOpen(false)}>Shop</Link></li>
+                <li><Link to={`/about`} onClick={() => setMenuOpen(false)}>About</Link></li>
+                <li><Link to={`/contact`} onClick={() => setMenuOpen(false)}>Contact</Link></li>
+              </ul>
+            </nav>
 
-        {/* Footer */}
-        <footer className="footer">
-          <p>&copy; 2025 Dripper. All rights reserved.</p>
-          <div className="social-links">
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-          </div>
-        </footer>
-      </div>
+            <Link to={`/cart`} className="cart">
+              🛒
+            </Link>
+          </header>
+
+          {/* Routes */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/product/:id" element={<ProductPage />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/checkout" element={<Checkout />} />
+          </Routes>
+        </div>
+      </Router>
   );
 };
 
