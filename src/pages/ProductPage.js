@@ -66,8 +66,10 @@ const ProductPage = () => {
     return (
         <div className="product-page">
             <button onClick={() => navigate(-1)} className="back-btn">Back</button>
-            <div className="product-details">
+            <div>
                 <img src={product.img} alt={product.name} className="product-img-large" />
+            </div>
+            <div className="product-details">
                 <div className="product-info">
                     <h2 className="product-title">{product.name}</h2>
                     <p className="product-description">{product.description}</p>
