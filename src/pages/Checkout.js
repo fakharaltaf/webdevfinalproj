@@ -7,6 +7,7 @@ const Checkout = () => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
+        phone: "",  // Add phone field
         address: "",
         city: "",
         zip: "",
@@ -40,6 +41,7 @@ const Checkout = () => {
         const emailData = {
             name: formData.name,
             email: formData.email,
+            phone: formData.phone,  // Add phone number
             address: formData.address,
             city: formData.city,
             zip: formData.zip,
@@ -111,6 +113,9 @@ const Checkout = () => {
 
                         <label>Email:</label>
                         <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+
+                        <label>Phone Number:</label>
+                        <input type="text" name="phone" value={formData.phone} onChange={handleChange} required />
 
                         <label>Address:</label>
                         <input type="text" name="address" value={formData.address} onChange={handleChange} required />
