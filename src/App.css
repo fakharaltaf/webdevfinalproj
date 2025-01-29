@@ -75,6 +75,59 @@
     }
   }
 
+  @media (max-width: 768px) {
+    .hero {
+      height: auto;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: 32px;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+
+    .hero-btn {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .product-grid {
+      grid-template-columns: 1fr;
+      align-items: center;
+    }
+
+    .product-card {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .checkout-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .checkout-form, .order-summary {
+      width: 100%;
+
+    }
+  }
+
+  @media (max-width: 600px) {
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
   /* Apply the custom font */
   .custom-font{
     font-family: 'DocallismeOnStreet', sans-serif;

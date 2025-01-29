@@ -87,6 +87,22 @@ const Checkout = () => {
             <h1 className="custom-font">Checkout</h1>
 
             <div className="checkout-container">
+                <div className="order-summary">
+                    <h2>Order Summary</h2>
+                    <ul>
+                        {cart.map((item, index) => (
+                            <li key={index} className="order-item">
+                                <img src={item.img} alt={item.name} className="order-img" />
+                                <div>
+                                    <h4>{item.name}</h4>
+                                    <p>Quantity: {item.quantity}</p>
+                                    <p>Price: {item.price}</p>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                    <h3>Total: PKR {calculateTotal()}</h3>
+                </div>
                 <div className="checkout-form">
                     <h2>Billing Details</h2>
                     <form onSubmit={handleSubmit}>
@@ -107,30 +123,13 @@ const Checkout = () => {
 
                         <label>Payment Method:</label>
                         <select name="paymentMethod" value={formData.paymentMethod} onChange={handleChange}>
-                            <option value="credit-card">Credit Card</option>
-                            <option value="paypal">PayPal</option>
                             <option value="cod">Cash on Delivery</option>
+                            <option value="jazz-cash">Jazz Cash</option>
+                            <option value="bank-transfer">Bank Transfer</option>
                         </select>
 
                         <button type="submit" className="checkout-btn">Place Order</button>
                     </form>
-                </div>
-
-                <div className="order-summary">
-                    <h2>Order Summary</h2>
-                    <ul>
-                        {cart.map((item, index) => (
-                            <li key={index} className="order-item">
-                                <img src={item.img} alt={item.name} className="order-img" />
-                                <div>
-                                    <h4>{item.name}</h4>
-                                    <p>Quantity: {item.quantity}</p>
-                                    <p>Price: {item.price}</p>
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
-                    <h3>Total: PKR {calculateTotal()}</h3>
                 </div>
             </div>
         </div>
