@@ -1,38 +1,38 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import ProductPage from "./pages/ProductPage";
 import Cart from "./pages/Cart";
 import About from "./pages/About";
-import Contact from "./pages/Contact";// Import Contact page
+import Contact from "./pages/Contact";
 import Shop from "./pages/Shop";
 import Checkout from "./pages/Checkout";
-import { Link } from "react-router-dom";
 
 const App = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
       <Router>
         <div className="app">
           {/* Header */}
           <header className="header">
             <h1 className="logo">dripper.</h1>
-            <nav className="nav">
+
+            {/* Hamburger Menu */}
+            <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+              ☰
+            </button>
+
+            <nav className={`nav ${menuOpen ? "open" : ""}`}>
               <ul className="nav-links">
-                <li><Link to={`/`} className="Home">
-                  Home
-                </Link></li>
-                <li><Link to={`/shop`} className="Shop">
-                  Shop
-                </Link></li>
-                <li><Link to={`/about`} className="About">
-                  About
-                </Link></li>
-                <li><Link to={`/contact`} className="Contact">
-                  Contact
-                </Link></li>
+                <li><Link to={`/`} onClick={() => setMenuOpen(false)}>Home</Link></li>
+                <li><Link to={`/shop`} onClick={() => setMenuOpen(false)}>Shop</Link></li>
+                <li><Link to={`/about`} onClick={() => setMenuOpen(false)}>About</Link></li>
+                <li><Link to={`/contact`} onClick={() => setMenuOpen(false)}>Contact</Link></li>
               </ul>
             </nav>
+
             <Link to={`/cart`} className="cart">
               🛒
             </Link>
