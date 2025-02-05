@@ -12,34 +12,22 @@ const ProductPage = () => {
     // Mock product data
     const products = {
         1: {
-            name: "Folklore White Tea",
-            price: "5999/-",
-            description: "A soothing white tea for every occasion.",
-            img: "/components/products/folklore-white-tea.jpg"
+            name: "Ferrari Jacket Black",
+            price: "12999/-",
+            description: "This Ferrari jacket is a bold statement piece that showcases the iconic Ferrari logo, symbolizing speed and luxury. The sleek design is complemented by high-quality materials, making it both stylish and comfortable. With its vibrant color and sporty look, this jacket is perfect for fans of the brand or anyone who wants to add a touch of racing-inspired flair to their wardrobe. Whether you're at a car show or just hanging out with friends, this jacket will definitely make you stand out!",
+            img: "/components/products/ferrari-black-bed.jpg"
         },
         2: {
-            name: "Invincible Graphic Tee",
-            price: "4999/-",
-            description: "Stylish graphic tee for everyday wear.",
-            img: "/components/products/invincible-black-tee.jpg"
+            name: "Ferrari Jacket Red",
+            price: "12999/-",
+            description: "This red Ferrari jacket is a showstopper! 🚗💨 The two Ferrari racing logos add a touch of speed and excitement to the design. The vibrant color and sleek style make it a standout piece for any racing enthusiast or fashion lover. You'll definitely turn heads and feel like you're part of the Ferrari team wearing this jacket!",
+            img: "/components/products/ferrari-red-wall.jpg"
         },
         3: {
-            name: "Vagabond Jogger Pants",
-            price: "4500/-",
-            description: "Comfortable joggers for active lifestyles.",
-            img: "/components/products/jogger-pants.jpg"
-        },
-        4: {
-            name: "Meditation Black Tee",
-            price: "3900/-",
-            description: "Relax in style with this premium black tee.",
-            img: "/components/products/ongabonga.jpg"
-        },
-        5: {
-            name: "Samurai Soulmates White Tee",
-            price: "7150/-",
-            description: "A tribute to timeless bonds and elegance.",
-            img: "/components/products/samurai-soulmates-white-tee.jpg"
+            name: "Ferrari Jacket Red-White-Black",
+            price: "12999/-",
+            description: "That Ferrari jacket with the red and white color scheme is seriously stylish! The Ferrari logo on the back adds a touch of luxury and sportiness to the design. You'll feel like a racing champion rocking this jacket! 🏁🔴⚪\n",
+            img: "/components/products/ferrari-multi-wall.jpg"
         }
     };
 

@@ -5,12 +5,25 @@ import { Link } from "react-router-dom";
 const Shop = () => {
     // Mock product data (can be moved to a separate file for better organization)
     const products = [
-        { id: 1, name: "Folklore White Tea", price: "5999/-", img: "/components/products/folklore-white-tea.jpg" },
-        { id: 2, name: "Invincible Graphic Tee", price: "4999/-", img: "/components/products/invincible-black-tee.jpg" },
-        { id: 3, name: "Vagabond Jogger Pants", price: "4500/-", img: "/components/products/jogger-pants.jpg" },
-        { id: 4, name: "Meditation Black Tee", price: "3900/-", img: "/components/products/ongabonga.jpg" },
-        { id: 5, name: "Samurai Soulmates White Tee", price: "7150/-", img: "/components/products/samurai-soulmates-white-tee.jpg" }
-        // Add more products here
+        {
+            id: 1,
+            name: "Ferrari Jacket Black",
+            price: "12999/-",
+            img: "/components/products/ferrari-black.jpg"
+        },
+        {
+            id: 2,
+            name: "Ferrari Jacket Red",
+            price: "12999/-",
+            img: "/components/products/ferrari-red.jpg"
+        },
+        {
+            id: 3,
+            name: "Ferrari Jacket RBW",
+            price: "12999/-",
+            description: "That Ferrari jacket with the red and white color scheme is seriously stylish! The Ferrari logo on the back adds a touch of luxury and sportiness to the design. You'll feel like a racing champion rocking this jacket! 🏁🔴⚪\n",
+            img: "/components/products/ferrari-multi.jpg"
+        },
     ];
 
     return (
