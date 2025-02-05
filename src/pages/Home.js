@@ -28,7 +28,7 @@ const Home = () => {
             {/* Hero Section */}
             <section id="home" className="hero">
                 <h2 className="hero-title custom-font">Own the Street.</h2>
-                <p className="hero-subtitle">wear dripper.</p>
+                <p className="hero-subtitle">stay drippy.</p>
                 <button className="hero-btn"><a href={"#shop"}>Shop Now</a></button>
             </section>
 
