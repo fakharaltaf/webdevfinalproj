@@ -91,7 +91,6 @@ const Contact = () => {
                 <h2>Contact Information</h2>
                 <p>Email: <a href="mailto:support@dripper.com">support@dripper.com</a></p>
                 <p>Instagram: <a href="https://www.instagram.com/dripper.gallery/">dripper.gallery</a></p>
-                <p>Address: 123 Fashion Street, Style City, USA</p>
             </section>
         </div>
     );

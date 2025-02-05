@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.d220f1cc.css",
-    "main.js": "/static/js/main.48ed4d50.js",
+    "main.js": "/static/js/main.ca91ba6a.js",
     "static/js/453.43a9c4c3.chunk.js": "/static/js/453.43a9c4c3.chunk.js",
     "static/media/Docallisme-On-Street.ttf": "/static/media/Docallisme-On-Street.b402f1402093730f5118.ttf",
     "static/media/streetwear-banner.jpg": "/static/media/streetwear-banner.dfd6dfec77261296bc1b.jpg",
     "index.html": "/index.html",
     "main.d220f1cc.css.map": "/static/css/main.d220f1cc.css.map",
-    "main.48ed4d50.js.map": "/static/js/main.48ed4d50.js.map",
+    "main.ca91ba6a.js.map": "/static/js/main.ca91ba6a.js.map",
     "453.43a9c4c3.chunk.js.map": "/static/js/453.43a9c4c3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d220f1cc.css",
-    "static/js/main.48ed4d50.js"
+    "static/js/main.ca91ba6a.js"
   ]
 }

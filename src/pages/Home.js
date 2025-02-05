@@ -55,9 +55,8 @@ const Home = () => {
             <footer className="footer">
                 <p>&copy; 2025 Dripper. All rights reserved.</p>
                 <div className="social-links">
-                    <a href="">Instagram</a>
-                    <a href="#">Facebook</a>
-                    <a href="#">Twitter</a>
+                    <a href="https://www.instagram.com/dripper.gallery/">Instagram</a>
+                    <a href="mailto:support@dripper.pk">Email</a>
                 </div>
             </footer>
         </div>
